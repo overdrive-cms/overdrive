@@ -196,8 +196,9 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 
-		'Module' => 'Caffeinated\Modules\Facades\Module',
-		'Debugbar' => 'Barryvdh\Debugbar\Facade',
+		'Modules' 	=> 'Caffeinated\Modules\Facades\Module',
+		'Debugbar' 	=> 'Barryvdh\Debugbar\Facade',
+		'Module' 	=> 'Modules\Core\Facades\Module',
 
 	],
 

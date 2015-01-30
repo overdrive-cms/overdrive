@@ -1,0 +1,7 @@
+{
+	"name": "Core",
+	"slug": "core",
+	"version": "1.0",
+	"description": "The Core of the System. It's the 'glue' that binds everything together.",
+	"enabled": true
+}

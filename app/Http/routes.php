@@ -28,6 +28,6 @@ Route::controllers([
 // Displays all installed modules
 Route::group(['prefix' => 'modules'], function() {
 	Route::get('/', function() {
-		return Module::all();
+		return Module::install();
 	});
 });

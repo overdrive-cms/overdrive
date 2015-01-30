@@ -1,7 +1,7 @@
 {
 	"name": "Static Pages",
-	"slug": "StaticPages",
-	"version": "1.0",
+	"slug": "static-pages",
+	"version": "0.0.1",
 	"description": "Display pages with static content (Raw HTML). Either as text files or in a database.",
 	"enabled": true
 }
