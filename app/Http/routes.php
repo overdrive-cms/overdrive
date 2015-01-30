@@ -16,7 +16,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 
 Route::get('test', function() {
-	return 'Moin moin!\nIch bin der master branch!';
+	return 'Moin moin!<br />Ich bin der master branch!';
 });
 
 Route::controllers([
