@@ -6,12 +6,13 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "5.0.*@dev",
-		"caffeinated/modules": "~1.0@dev",
-		"fzaninotto/faker": "~1.5@dev"
+		"caffeinated/modules": "~1.0@dev"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
-		"phpspec/phpspec": "~2.1"
+		"phpspec/phpspec": "~2.1",
+	  	"fzaninotto/faker": "~1.5@dev",
+		"barryvdh/laravel-debugbar": "~1.8@dev"
 	},
 	"autoload": {
 		"classmap": [
