@@ -12,3 +12,9 @@ TODO:
 - soft deletes
 - page layouts
 
+To see it in action run in command line:
+`php artisan module:migrate StaticPages`
+and
+`php artisan module:seed StaticPages`
+
+Then go to `overdrive.app/static` to see all static page entries. For a single page use the url-parameter as slug (`overdrive.app/about`)

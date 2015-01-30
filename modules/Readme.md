@@ -13,3 +13,10 @@ Modules are located in the `/Modules` Folder. Until now there is no Database ent
 ```
 
 The Folder structure of a module matches the structure of the main `/app` directory and also behaves like that. Module files are namespaced with `Modules\ModuleName\`.
+To see all installed modules as a json Object go to `overdrive.app/modules`.
+
+TODO:
+- implement modules-management (install/uninstall/activate/deactivate)
+- enable installation through github or packagist (composer)
+- Management Interface
+- optimize management folder structure
