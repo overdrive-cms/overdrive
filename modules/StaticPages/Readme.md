@@ -1,22 +1,20 @@
-# Modules
+# Static Pages Module
 
-Modules are located in the `/Modules` Folder. Until now there is no Database entry for each module, however each Module has a unique `module.json` file which looks like the following:
+The Static Pages module is just a really simple module for displaying static content on the site. The data of a page is stored in a database. Besides its content a page has a unique url from which the Module dispatches the content and displays it. If a page  could not be found a 404 Error will be thrown.
 
-```json
-{
-	"name": "Static Pages",
-	"slug": "StaticPages",
-	"version": "1.0",
-	"description": "Display pages with static content (Raw HTML). Either as text files or in a database.",
-	"enabled": true
-}
-```
-
-The Folder structure of a module matches the structure of the main `/app` directory and also behaves like that. Module files are namespaced with `Modules\ModuleName\`.
-To see all installed modules as a json Object go to `overdrive.app/modules`.
+For Example if a user browses to the url `/about` the StaticPages module will run a query against the database and tries to find an entry that matches the `url` column. If found it will be displayed on the site.
 
 TODO:
-- implement modules-management (install/uninstall/activate/deactivate)
-- enable installation through github or packagist (composer)
-- Management Interface
-- optimize management folder structure
+- option to store sites in files instead database only
+- theme support
+- Add Methods to add/update & delete pages
+- drafts und public pages
+- soft deletes
+- page layouts
+
+To see it in action run in command line:
+`php artisan module:migrate StaticPages`
+and
+`php artisan module:seed StaticPages`
+
+Then go to `overdrive.app/static` to see all static page entries. For a single page use the url-parameter as slug (`overdrive.app/about`)
