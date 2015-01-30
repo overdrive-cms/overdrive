@@ -11,7 +11,7 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		//
+		//\Config::set('caffeinated::modules', ['path' => base_path('Modules')]);
 	}
 
 	/**
@@ -29,6 +29,7 @@ class AppServiceProvider extends ServiceProvider {
 			'Illuminate\Contracts\Auth\Registrar',
 			'App\Services\Registrar'
 		);
+
 	}
 
 }

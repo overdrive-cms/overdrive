@@ -146,6 +146,7 @@ return [
 		'App\Providers\RouteServiceProvider',
 
 		'Caffeinated\Modules\ModulesServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 	],
 
@@ -196,6 +197,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 
 		'Module' => 'Caffeinated\Modules\Facades\Module',
+		'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
 	],
 
