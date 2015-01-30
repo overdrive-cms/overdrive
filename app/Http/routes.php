@@ -23,3 +23,11 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+// Displays all installed modules
+Route::group(['prefix' => 'modules'], function() {
+	Route::get('/', function() {
+		return Module::all();
+	});
+});

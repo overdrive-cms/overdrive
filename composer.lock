@@ -4,8 +4,62 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4524eaa383efc0fb9182c2e9d2111b00",
+    "hash": "79dbcbd7a590b5adea9a3ede5792a96b",
     "packages": [
+        {
+            "name": "caffeinated/modules",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caffeinated/modules.git",
+                "reference": "43d3c4c45926dad88904f60e5fecc97329da3020"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caffeinated/modules/zipball/43d3c4c45926dad88904f60e5fecc97329da3020",
+                "reference": "43d3c4c45926dad88904f60e5fecc97329da3020",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": ">=5.0.0",
+                "illuminate/database": ">=5.0.0",
+                "illuminate/filesystem": ">=5.0.0",
+                "illuminate/routing": ">=5.0.0",
+                "illuminate/support": ">=5.0.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Caffeinated\\Modules": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shea Lewis",
+                    "email": "shea.lewis89@gmail.com"
+                }
+            ],
+            "description": "Laravel 5 Modules",
+            "keywords": [
+                "caffeinated",
+                "laravel",
+                "modules"
+            ],
+            "time": "2015-01-23 01:59:15"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "1.2.0",
@@ -2784,11 +2838,12 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
-        "laravel/framework": 20
+        "laravel/framework": 20,
+        "caffeinated/modules": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": []

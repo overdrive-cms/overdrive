@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://overdrive.dev',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -145,6 +145,8 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+		'Caffeinated\Modules\ModulesServiceProvider',
+
 	],
 
 	/*
@@ -192,6 +194,8 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+
+		'Module' => 'Caffeinated\Modules\Facades\Module',
 
 	],
 
