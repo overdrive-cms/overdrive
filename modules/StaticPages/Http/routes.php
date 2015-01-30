@@ -17,7 +17,9 @@ Route::group(['prefix' => 'static'], function() {
 	});
 });
 
-Route::get('{slug}', function($slug) {
+Route::get('{slug}', 'PageController@showPage');
+
+/*Route::get('{slug}', function($slug) {
 	$page = Modules\StaticPages\StaticPage::where('url', $slug)->get();
 
 	if($page->isEmpty()) {
@@ -25,4 +27,4 @@ Route::get('{slug}', function($slug) {
 	}
 
 	return $page;
-});
+});*/

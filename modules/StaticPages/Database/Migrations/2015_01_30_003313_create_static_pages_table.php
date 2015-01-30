@@ -21,6 +21,7 @@ class CreateStaticPagesTable extends Migration
 			$table->text('content_raw');
 			$table->text('content_compiled')->nullable();
 			$table->string('processor')->nullabke();
+			$table->string('layout')->default('default');
 			$table->string('status')->default('draft');
 			$table->softDeletes();
 			$table->timestamps();
