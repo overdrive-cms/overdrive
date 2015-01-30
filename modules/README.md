@@ -14,6 +14,12 @@ looks like the following:
 }
 ```
 
+name - The name of the module
+slug - The internally used name of the module
+version - The current version of the module
+description - A short desription of the module
+enabled - If true, the module is enabled b default when it's loaded into the CMS
+
 The Folder structure of a module matches the structure of the main `/app`
 directory and also behaves like that. Module files are namespaced within
 `Modules\ModuleName\`.
