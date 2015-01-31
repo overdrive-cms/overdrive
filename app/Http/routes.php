@@ -28,6 +28,11 @@ Route::controllers([
 // Displays all installed modules
 Route::group(['prefix' => 'modules'], function() {
 	Route::get('/', function() {
-		return Module::install();
+		debug(Module::all());
+		return Module::all();
 	});
+});
+
+Route::get('load', function() {
+	return Module::install('https://github.com/overdrive-cms/test.git');
 });
