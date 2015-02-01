@@ -11,7 +11,6 @@ use \Storage;
  * @package Modules\Core
  */
 class Module extends Modules implements Countable {
-
     /**
      * TODO:
      * installs a module from a github/packagist/bitbucket repo or a zip-file into the filesystem.

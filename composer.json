@@ -7,7 +7,8 @@
 	"require": {
 		"laravel/framework": "5.0.*@dev",
 		"caffeinated/modules": "~1.0@dev",
-		"alchemy/zippy": "0.2.*@dev"
+		"alchemy/zippy": "0.2.*@dev",
+		"guzzlehttp/guzzle": "~5.0@dev"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",

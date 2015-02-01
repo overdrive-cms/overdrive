@@ -1,0 +1,7 @@
+{
+  "name": "Test Module",
+  "slug": "test",
+  "version": "0.0.1",
+  "description": "A simple dummy module to test module handling classes.",
+  "enabled": false
+}
