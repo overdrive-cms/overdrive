@@ -15,7 +15,9 @@ class Module extends Modules implements Countable
 {
     /**
      * TODO:
-     * installs a module from a github/packagist/bitbucket repo or a zip-file into the filesystem.
+     * installs a module from a github/packagist/bitbucket repo or a zip-file
+     * into the filesystem.
+     * 
      * 1. load module-Zip
      * 2. Create Namespaced Module Folder (By checking out the module.json)
      * 3. Extract Module into folder
@@ -38,7 +40,8 @@ class Module extends Modules implements Countable
      * TODO:
      * removes a module from the filesystem and database permanently.
      * 1. roll back all migrations (php artisan module:migrate-reset ModuleName)
-     * 2. Delete all assets that might would have been published into the public directory
+     * 2. Delete all assets that might would have been published into the public
+     *   directory
      * 3. Delete the modules folder
      */
     public function uninstall()
@@ -55,7 +58,8 @@ class Module extends Modules implements Countable
     {
         $match = [];
 
-        preg_match("/(github\.com)\/([\w\-\d\.]+)\/([\w\-\d\.\:]+)(\.git)/", $url, $match);
+        preg_match("/(github\.com)\/([\w\-\d\.]+)\/([\w\-\d\.\:]+)(\.git)/",
+                   $url, $match);
 
         if (isset($match[1]) && $match[1] == 'github.com') {
             return true;
@@ -106,7 +110,8 @@ class Module extends Modules implements Countable
     /**
      * Detects which Type of Repository is used.
      * @param $url
-     * @return string describing which repository Type is used (git, packagist, bitbucked, zip file...)
+     * @return string describing which repository Type is used (git, packagist,
+     * bitbucked, zip file...)
      */
     public function detectRepoType($url)
     {
