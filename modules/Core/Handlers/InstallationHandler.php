@@ -25,7 +25,7 @@ class InstallationHandler {
 
     protected $config;
 
-    public function __construct(Filesystem $files, Repository $config, Client $http)
+    public function __construct(Repository $config, Filesystem $files, Client $http)
     {
         $this->files = $files;
         $this->config = $config;

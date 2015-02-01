@@ -15,6 +15,8 @@ use Modules\Core\Installer;
 class ModulesHandler extends \Caffeinated\Modules\Handlers\ModulesHandler implements \Countable {
 
     protected $installer;
+    protected $config;
+    protected $files;
     /**
      * Constructor method.
      *

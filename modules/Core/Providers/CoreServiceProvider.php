@@ -5,7 +5,7 @@ use Alchemy\Zippy\Zippy;
 use App;
 use Config;
 use Lang;
-use Modules\Core\Facades\Installer;
+use Modules\Core\Installer;
 use View;
 use Illuminate\Support\ServiceProvider;
 
@@ -28,19 +28,19 @@ class CoreServiceProvider extends ServiceProvider
 			return new \GuzzleHttp\Client;
 		});
 
-		App:bindShared('modules.handler', function ($app)
+		$this->app->bindShared('core.installer.handler', function($app)
 		{
-			return new \Modules\Core\Handlers\ModulesHandler($app['files'], $app['config'], $app['core.installer']);
+			return new \Modules\Core\Handlers\InstallationHandler($app['config'], $app['files'], $app['guzzle']);
 		});
 
-		App::bindShared('module', function($app)
+		$this->app->bindShared('module', function($app)
 		{
 			return new \Modules\Core\Module($app['modules.handler'], $app['config'], $app['files']);
 		});
 
-		App::bindShared('core.installer', function($app)
+		$this->app->bindShared('core.installer', function($app)
 		{
-			return new Installer($app['files'], $app['config'], $app['guzzle']);
+			return new Installer($app['core.installer.handler'], $app['config'], $app['files']);
 		});
 
 		$this->registerNamespaces();

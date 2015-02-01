@@ -34,7 +34,8 @@ Route::group(['prefix' => 'modules'], function() {
 });
 
 Route::get('load', function() {
-    $path = storage_path('downloads/modules/test.zip');
+    \Installer::newModule('');
+    /*$path = storage_path('downloads/modules/test.zip');
     $resource = fopen($path, 'w+');
     $stream = GuzzleHttp\Stream\Stream::factory($resource);
     Guzzle::get('https://github.com/overdrive-cms/test/archive/master.zip', [
@@ -43,6 +44,6 @@ Route::get('load', function() {
     ]);
     $zippy = \Alchemy\Zippy\Zippy::load();
     $archive = $zippy->open($path);
-    $archive->extract(storage_path('downloads/modules'));
+    $archive->extract(storage_path('downloads/modules'));*/
     //return Module::install('https://github.com/overdrive-cms/test.git');
 });

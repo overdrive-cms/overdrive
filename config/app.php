@@ -200,7 +200,7 @@ return [
 		'Debugbar' 	=> 'Barryvdh\Debugbar\Facade',
 		'Module' 	=> 'Modules\Core\Facades\Module',
 		'Guzzle' 	=> 'Modules\Core\Facades\Guzzle',
-		'Install' 	=> 'Modules\Core\Facades\Installer',
+		'Installer' => 'Modules\Core\Facades\Installer',
 
 	],
 
