@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08928ed7-8e81-46b5-b651-6386ec5b1b5a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
     </list>
@@ -403,12 +404,12 @@
       <created>1422581992047</created>
       <option name="number" value="Default" />
       <updated>1422581992047</updated>
-      <workItem from="1422581995596" duration="23021000" />
+      <workItem from="1422581995596" duration="23076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23021000" />
+    <option name="totallyTimeSpent" value="23076000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
