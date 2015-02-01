@@ -1,4 +1,5 @@
 <?php namespace Modules\Core;
+
 use \Caffeinated\Modules\Modules;
 use Countable;
 use \Storage;
@@ -10,8 +11,8 @@ use \Storage;
  *
  * @package Modules\Core
  */
-class Module extends Modules implements Countable {
-
+class Module extends Modules implements Countable
+{
     /**
      * TODO:
      * installs a module from a github/packagist/bitbucket repo or a zip-file into the filesystem.
@@ -22,7 +23,8 @@ class Module extends Modules implements Countable {
      * 4. Run migrations (php artisan module:migrate ModuleName)
      * 5. (optional) Run Seeds (php artisan module:seed ModuleName)
      */
-    public function install($url) {
+    public function install($url)
+    {
         return $file = $this->load($url);
         /*$temp = 'downloads/modules/zip/module.zip';
         Storage::put($temp, $file);
@@ -39,7 +41,8 @@ class Module extends Modules implements Countable {
      * 2. Delete all assets that might would have been published into the public directory
      * 3. Delete the modules folder
      */
-    public function uninstall() {
+    public function uninstall()
+    {
         //
     }
 
@@ -48,12 +51,13 @@ class Module extends Modules implements Countable {
      * @param $url
      * @return bool
      */
-    public function isGithub($url) {
+    public function isGithub($url)
+    {
         $match = [];
 
         preg_match("/(github\.com)\/([\w\-\d\.]+)\/([\w\-\d\.\:]+)(\.git)/", $url, $match);
 
-        if(isset($match[1]) && $match[1] == 'github.com') {
+        if (isset($match[1]) && $match[1] == 'github.com') {
             return true;
         }
         return false;
@@ -64,7 +68,8 @@ class Module extends Modules implements Countable {
      * @param $file
      * @return bool
      */
-    public function isZipFile($file) {
+    public function isZipFile($file)
+    {
         return false;
     }
 
@@ -73,7 +78,8 @@ class Module extends Modules implements Countable {
      * @param $url
      * @return bool
      */
-    public function isPackagist($url) {
+    public function isPackagist($url)
+    {
         return false;
     }
 
@@ -81,7 +87,8 @@ class Module extends Modules implements Countable {
      * Loads the actual remote File.
      * @param $url
      */
-    public function load($url) {
+    public function load($url)
+    {
         $type = camel_case('get_'.$this->detectRepoType($url).'_repo');
         return $this->$type($url);
     }
@@ -91,7 +98,8 @@ class Module extends Modules implements Countable {
      * @param $type
      * @param $file
      */
-    public function loadFile($type, $file) {
+    public function loadFile($type, $file)
+    {
         //
     }
 
@@ -100,17 +108,15 @@ class Module extends Modules implements Countable {
      * @param $url
      * @return string describing which repository Type is used (git, packagist, bitbucked, zip file...)
      */
-    public function detectRepoType($url) {
-        if($this->isGithub($url)) {
+    public function detectRepoType($url)
+    {
+        if ($this->isGithub($url)) {
             return 'github';
-        }
-        elseif($this->isPackagist($url)) {
+        } elseif ($this->isPackagist($url)) {
             return 'packagist';
-        }
-        elseif($this->isZipFile($url)) {
+        } elseif ($this->isZipFile($url)) {
             return 'zip';
-        }
-        else {
+        } else {
             return false;
         }
     }
@@ -124,7 +130,8 @@ class Module extends Modules implements Countable {
      * @param $url
      * @return mixed
      */
-    public function getGithubRepo($url) {
+    public function getGithubRepo($url)
+    {
         $path = storage_path('downloads/modules');
         exec("git clone $url $path");
         return "'git clone $url $path' executed'";
@@ -136,5 +143,4 @@ class Module extends Modules implements Countable {
         }
         return false;*/
     }
-
 }
