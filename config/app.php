@@ -199,6 +199,8 @@ return [
 		'Modules' 	=> 'Caffeinated\Modules\Facades\Module',
 		'Debugbar' 	=> 'Barryvdh\Debugbar\Facade',
 		'Module' 	=> 'Modules\Core\Facades\Module',
+		'Guzzle' 	=> 'Modules\Core\Facades\Guzzle',
+		'Installer' => 'Modules\Core\Facades\Installer',
 
 	],
 

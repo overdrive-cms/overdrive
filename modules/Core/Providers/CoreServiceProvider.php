@@ -1,9 +1,11 @@
 <?php
 namespace Modules\Core\Providers;
 
+use Alchemy\Zippy\Zippy;
 use App;
 use Config;
 use Lang;
+use Modules\Core\Installer;
 use View;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,9 +23,24 @@ class CoreServiceProvider extends ServiceProvider
 		// methods or service providers to keep the code more focused and granular.
 		App::register('Modules\Core\Providers\RouteServiceProvider');
 
-		App::bind('module', function($app)
+		App::bind('guzzle', function($app)
+		{
+			return new \GuzzleHttp\Client;
+		});
+
+		$this->app->bindShared('core.installer.handler', function($app)
+		{
+			return new \Modules\Core\Handlers\InstallationHandler($app['config'], $app['files'], $app['guzzle']);
+		});
+
+		$this->app->bindShared('module', function($app)
 		{
 			return new \Modules\Core\Module($app['modules.handler'], $app['config'], $app['files']);
+		});
+
+		$this->app->bindShared('core.installer', function($app)
+		{
+			return new Installer($app['core.installer.handler'], $app['config'], $app['files']);
 		});
 
 		$this->registerNamespaces();
