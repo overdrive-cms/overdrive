@@ -23,3 +23,11 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+Route::group(['prefix' => 'api/v1/'], function()
+{
+    Route::get('modules', function() {
+        return ["name" => "Core"];
+    });
+});
