@@ -1,0 +1,15 @@
+{
+	"name": "overdrive/pages",
+	"description": "",
+	"authors": [
+		{
+			"name": "Overdrive CMS",
+			"email": "adrian.goldner@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Modules\\Pages\\": ""
+		}
+	}
+}
