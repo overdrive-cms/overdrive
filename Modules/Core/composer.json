@@ -1,15 +1,15 @@
 {
-  "name": "pingpong-modules/blog",
+  "name": "overdrive/core",
   "description": "",
   "authors": [
     {
-      "name": "Pingpong Labs",
-      "email": "pingpong.labs@gmail.com"
+      "name": "Overdrive CMS",
+      "email": "adrian.goldner@gmail.com"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Modules\\Blog\\": ""
+      "Modules\\Core\\": ""
     }
   }
 }
