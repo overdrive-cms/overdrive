@@ -5,15 +5,15 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateOverdriveCollectionsTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::create('overdrive_collections', function(Blueprint $table)
-		{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('overdrive_collections', function (Blueprint $table)
+        {
             $table->string('slug');
             $table->string('title');
             $table->string('sub_title');
@@ -26,17 +26,18 @@ class CreateOverdriveCollectionsTable extends Migration {
             $table->integer('meta_id');
             $table->timestamps();
             $table->softDeletes();
-		});
-	}
+        });
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('overdrive_collections');
-	}
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('overdrive_collections');
+    }
 
 }

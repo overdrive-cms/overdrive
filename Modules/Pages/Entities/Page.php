@@ -1,4 +1,5 @@
 <?php namespace Modules\Pages\Entities;
+
 /**
  * Created by IntelliJ IDEA.
  * User: adrian

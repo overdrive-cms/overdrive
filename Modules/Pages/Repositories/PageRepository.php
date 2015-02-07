@@ -8,7 +8,6 @@
 
 namespace Modules\Pages\Repositories;
 
-
 class PageRepository {
 
 }

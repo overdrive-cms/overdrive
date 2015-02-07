@@ -5,15 +5,15 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateItemsTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::create('overdrive_items', function(Blueprint $table)
-		{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('overdrive_items', function (Blueprint $table)
+        {
             $table->increments('id');
             $table->string('slug');
             $table->integer('collection_id');
@@ -32,17 +32,18 @@ class CreateItemsTable extends Migration {
             $table->integer('meta_id');
             $table->timestamps();
             $table->softDeletes();
-		});
-	}
+        });
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('overdrive_items');
-	}
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('overdrive_items');
+    }
 
 }

@@ -5,19 +5,19 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreatePagesTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		//Schema::drop('pages');
-        Schema::create('overdrive_pages', function(Blueprint $table)
-		{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        //Schema::drop('pages');
+        Schema::create('overdrive_pages', function (Blueprint $table)
+        {
             $table->increments('id');
             $table->string('slug');
-		    $table->string('uri')->unique();
+            $table->string('uri')->unique();
             $table->integer('parent');
             $table->boolean('has_children');
             $table->integer('collection_id');
@@ -31,17 +31,18 @@ class CreatePagesTable extends Migration {
             $table->text('styles')->nullable();
             $table->timestamps();
             $table->softDeletes();
-		});
-	}
+        });
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('overdrive_pages');
-	}
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('overdrive_pages');
+    }
 
 }
